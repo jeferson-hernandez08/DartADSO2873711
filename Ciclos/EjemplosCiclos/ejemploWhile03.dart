@@ -13,7 +13,7 @@ void main() {
   cantNumeros = int.parse(stdin.readLineSync()!);  //TEMINAMOS AQUI REALIZAR EJERCICIO COMO TAREA
 
   while ( cantNumeros > 0 ) {
-    print("Ingrese un numero " + (i + 1).toString());
+    print("Ingrese un numero " + (i + 1).toString());  //Se trata de hacer ejercicio.
     num = double.parse(stdin.readLineSync()!);
     if ( num % 2 == 0) {
     //Comprobar si es par
