@@ -15,7 +15,7 @@ void main() {
   while ( contador < cantNumeros ) {
     print("Ingrese un numero " + (i + 1).toString());  //Se trata de hacer ejercicio.
     num = double.parse(stdin.readLineSync()!);           //Se usa material de apoyo en internet
-    if ( num % 2 == 0) {
+    if ( num % 2 == 0) {                               //Esta es una prueba 
     //Comprobar si es par
       print("El numero es par");
     }
