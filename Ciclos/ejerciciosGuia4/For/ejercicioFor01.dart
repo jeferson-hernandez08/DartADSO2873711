@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   //JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO FOR 01
   /*
@@ -6,15 +8,17 @@ void main() {
   */
 
   //DECLARACION VARIABLES
-  
+  double suma = 0;    //Variable tipo contador.
+  double calificacion;
+  double promedio;
 
-  //ENTRADA DATOS.
-
-
-  //PROCESO - FORMULAS - SALIDA
-  
-
-
-
-
+  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA.
+  for ( int i = 0; i <= 6 ; i ++) {
+    print("Ingrese la calificacion " + (i+1).toString());
+    calificacion = double.parse(stdin.readLineSync()!);
+    suma = suma + calificacion;
+    print ("La suma para el promedio va en : $suma");
+  }
+  promedio = suma / 7;
+  print ("Su promedio total es de : $promedio");
 }
