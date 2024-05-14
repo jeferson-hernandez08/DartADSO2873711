@@ -10,7 +10,7 @@ void main() {
   //DECLARACION VARIABLES
   int num;
 
-  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA.
+  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA.    //Prueba funcionamineto
   for ( int i = 0; i <= 19 ; i ++) {
     print ("Ingrese numero " + (i+1).toString());
     num = int.parse(stdin.readLineSync()!);
