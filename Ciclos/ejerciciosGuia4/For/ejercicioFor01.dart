@@ -8,7 +8,7 @@ void main() {
   */
 
   //DECLARACION VARIABLES
-  double suma = 0;    //Variable tipo acumulador.
+  double suma = 0;       //Variable tipo acumulador.
   double calificacion;
   double promedio;
 
