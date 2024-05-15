@@ -8,17 +8,18 @@ void main() {
   */
 
   //DECLARACION VARIABLES
-  double suma = 0;       //Variable tipo acumulador.
+  int    cantnotas = 7;  //Se realiza varible para condicion de parada, ya sea configurar hasta donde queremos que pare.
+  double suma = 0;       //Variable acumulador.
   double calificacion;
   double promedio;
 
   //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA.
-  for ( int i = 0; i <= 6 ; i ++) {
+  for ( int i = 0; i < cantnotas ; i ++) {
     print("Ingrese la calificacion " + (i+1).toString());
     calificacion = double.parse(stdin.readLineSync()!);
-    suma = suma + calificacion;
+    suma = suma + calificacion;          //Acumulacion.
     print ("La suma para el promedio va en : $suma");
   }
-  promedio = suma / 7;
+  promedio = suma / cantnotas;
   print ("Su promedio total es de : $promedio");
 }

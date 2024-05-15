@@ -7,10 +7,11 @@ void main() {
   */
 
   //DECLARACION VARIABLES
+  int cantNumeros = 10;    //Variable contador y parada.
   int num;
 
   //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA.
-  for ( int i = 0; i <= 9 ; i ++) {
+  for ( int i = 0; i < cantNumeros ; i ++) {
     print ("Ingrese numero " + (i+1).toString());
     num = int.parse(stdin.readLineSync()!);
     if ( num >= 0 ) {

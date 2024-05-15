@@ -9,20 +9,24 @@ void main() {
 
   //DECLARACION VARIABLES
   int num;
-  int numPositivos = 0, numNegativos = 0, numCeros = 0   ;        //Variable acumulador.
+  int cantNumeros = 20;
+  int numPositivos = 0, numNegativos = 0, numCeros = 0   ;      //Variable contador.
 
-  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA.    //Prueba funcionamineto
-  for ( int i = 0; i <= 19 ; i ++) {
+  //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA.    
+  for ( int i = 0; i < cantNumeros ; i ++) {
     print ("Ingrese numero " + (i+1).toString());
     num = int.parse(stdin.readLineSync()!);
     if ( num > 0 ) {
-    numPositivos = numPositivos + 1;
+      print("El numero es positivo");
+      numPositivos++;          //numPositivos = numPositivos + 1;
     }
     else if ( num < 0 ) {
-          numNegativos = numNegativos + 1;
+          print("El numero es negativo");
+          numNegativos++;     //numNegativos = numNegativos + 1;
          }
          else {
-          numCeros = numCeros + 1;
+          print("El numero es cero");
+          numCeros++;     //numCeros = numCeros + 1;
          }
   }
   print("Los numeros positivos son: $numPositivos");
