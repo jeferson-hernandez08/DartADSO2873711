@@ -18,7 +18,7 @@ void main() {
   print ("Ingrese numero de vendedores"); 
   cantVendedores = int.parse(stdin.readLineSync()!);
 
-  //PROCESO - FORMULAS - SALIDA
+  //PROCESO - FORMULAS - SALIDA DATOS.
   while ( contador < cantVendedores ) {              //Hacemos el while para la cantidad de vendedores 
       print ("Ingrese su sueldo base"); 
       sueldoBase = double.parse(stdin.readLineSync()!);

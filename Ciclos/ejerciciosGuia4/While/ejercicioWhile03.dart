@@ -12,10 +12,11 @@ void main() {
    int hombres = 0, mujeres = 0;          //Variable contador 
    String? genero;
   
-   //ENTRADA DATOS- PROCESOS FORMULAS - SALIDA DATOS. 
+   //ENTRADA DATOS 
     print ("Ingrese cantidad de estudiantes:");
     cantEstudiantes = int.parse(stdin.readLineSync()!);
 
+    //PROCESOS FORMULAS - SALIDA DATOS.
     while ( contador < cantEstudiantes ) {
       print ("Estudiante # "  + (contador+1).toString());
       print ("Ingrese M si es Hombre o F si Mujer:");
