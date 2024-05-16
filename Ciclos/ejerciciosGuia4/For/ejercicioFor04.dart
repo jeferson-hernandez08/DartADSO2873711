@@ -3,27 +3,38 @@ import 'dart:io';
 void main() {
   //JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO FOR 04
   /*
-    4. 
-
+    4. Suponga que se tiene un conjunto de calificaciones de un grupo de 40 alumnos. Realizar un algoritmo 
+       para calcular la calificación promedio y la calificación más baja de todo el grupo.
   */
 
   //DECLARACION VARIABLES
-  int num;
-  int numPositivos = 0, numNegativos = 0, numCeros = 0   ;        //Variable acumulador.
+  int cantAlumnos = 4;        //Variable para asignar la cantidad. Condicion de parada.
+  double suma = 0;            //Variable acumulador 
+  double nota, promedio;
+  double notaMenor = 9999;
+  double notaMayor = 0;
 
   //ENTRADA DATOS - PROCESOS - FORMULAS - SALIDA DATOS.    
-  for ( int i = 0; i <= 19 ; i ++) {
-    print ("Ingrese numero " + (i+1).toString());
-    num = int.parse(stdin.readLineSync()!);
-    if ( num > 0 ) {
-    numPositivos = numPositivos + 1;
+  for ( int i = 0; i < cantAlumnos; i++) {
+    print("Ingrese nota del alumno " + (i + 1).toString());
+    nota = double.parse(stdin.readLineSync()!);
+    while ( nota < 0 || nota > 5 ) {
+      print("La nota esta en rango incorrecto");
+      print("Ingrese de nuevo la nota del alumno " + (i + 1).toString());
+      nota = double.parse(stdin.readLineSync()!);
+      print("______________________________________");
     }
-    else if ( num < 0 ) {
-          numNegativos = numNegativos + 1;
-         }
-         else {
-          numCeros = numCeros + 1;
-         }
+    suma += nota;     // suma = suma + nota;
+    if ( nota < notaMenor) {
+      notaMenor = nota;
+    }
+    if ( nota > notaMenor) {
+      notaMayor = nota;
+    }
+    print("Hasta el momento la nota menor es: $notaMenor");
+    print("Hasta el momento la nota mayor es: $notaMayor");
   }
- 
+  promedio = suma / cantAlumnos;
+  print("El promedio es: $promedio");
+  print("La nota menor es: $notaMenor");
 }
