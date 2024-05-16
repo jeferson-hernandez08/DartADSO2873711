@@ -11,7 +11,7 @@ void main() {
   */
 
   //DECLARACION VARIABLES
-  int cantVendedores, contador = 0;
+  int cantVendedores, cantVentas = 3, contador = 0;
   double sueldoBase, comisiones =0, porcentajeComision = 0, sueldoTotal, precioVenta;
 
   //ENTRADA DATOS.
@@ -24,19 +24,14 @@ void main() {
       sueldoBase = double.parse(stdin.readLineSync()!);
       contador ++;
 
-      for (int i = 0; i < cantVendedores; i++) {     //Hacemos el for para la cantidad de ventas
+      for (int i = 0; i < cantVentas; i++) {     //Hacemos el for para la cantidad de ventas
         print ("Digite el valor de su venta " +(i+1).toString());
         precioVenta = double.parse(stdin.readLineSync()!);
         porcentajeComision = precioVenta * 0.10;
       }
-
       comisiones= porcentajeComision * 3;
       sueldoTotal = sueldoBase + comisiones; 
       print("Su sueldo base es de: $sueldoBase");
       print("Y su sueldo mas comisiones es: $sueldoTotal");
   }
-
-
-
-
 }
