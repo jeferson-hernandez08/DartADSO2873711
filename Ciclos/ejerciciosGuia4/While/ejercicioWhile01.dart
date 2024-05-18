@@ -15,23 +15,26 @@ void main() {
   double sueldoBase, comisiones =0, porcentajeComision = 0, sueldoTotal, precioVenta;
 
   //ENTRADA DATOS.
-  print ("Ingrese numero de vendedores"); 
+  print ("Ingrese la cantidad de vendedores:"); 
   cantVendedores = int.parse(stdin.readLineSync()!);
+  print ("Ingrese su sueldo base"); 
+  sueldoBase = double.parse(stdin.readLineSync()!);
 
-  //PROCESO - FORMULAS - SALIDA DATOS.
-  while ( contador < cantVendedores ) {              //Hacemos el while para la cantidad de vendedores 
-      print ("Ingrese su sueldo base"); 
-      sueldoBase = double.parse(stdin.readLineSync()!);
-      contador ++;
-
-      for (int i = 0; i < cantVentas; i++) {     //Hacemos el for para la cantidad de ventas
-        print ("Digite el valor de su venta " +(i+1).toString());
+  //ENTRADA DATOS - PROCESO FORMULAS - SALIDA DATOS.
+  while ( contador < cantVendedores ) {            //Hacemos el while para la cantidad de vendedores 
+    for (int i = 0; i < cantVentas; i++) {        //Hacemos el for para la cantidad de ventas
+      print ("Digite el valor de su venta ${i+1} del vendedor ${contador+1}");
+      precioVenta = double.parse(stdin.readLineSync()!);
+      while ( precioVenta < 0 || precioVenta > 10000000 ) {
+        print ("La venta esta fuera de rango, Ingrese de nuevo");
         precioVenta = double.parse(stdin.readLineSync()!);
-        porcentajeComision = precioVenta * 0.10;
       }
-      comisiones= porcentajeComision * 3;
-      sueldoTotal = sueldoBase + comisiones; 
-      print("Su sueldo base es de: $sueldoBase");
-      print("Y su sueldo mas comisiones es: $sueldoTotal");
+      porcentajeComision = precioVenta * 0.10;    //Comision por cada venta
+    }
+    comisiones= porcentajeComision * 3;           //Total comision por la tres ventas
+    sueldoTotal = sueldoBase + comisiones; 
+    print("Su sueldo base es de: $sueldoBase");
+    print("Y su sueldo mas comisiones es: $sueldoTotal");
+    contador ++;
   }
 }

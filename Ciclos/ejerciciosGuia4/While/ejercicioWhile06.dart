@@ -18,7 +18,7 @@ void main() {
    print ("Cual es la cantidad de alumnos ?");
    cantAlumnos = int.parse(stdin.readLineSync()!);
 
-   //PROCESOS FORMULAS - SALIDA DATOS. 
+   //ENTRADA DATOS - PROCESOS FORMULAS - SALIDA DATOS. 
    while ( contador < cantAlumnos ) {
     print ("Cual es su genero y edad ?");
     genero = stdin.readLineSync();

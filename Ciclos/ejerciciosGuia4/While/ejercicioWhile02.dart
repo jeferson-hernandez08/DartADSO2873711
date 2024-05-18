@@ -12,7 +12,7 @@ void main() {
   */
   
   //DECLARACION VARIABLES
-  int contador = 0;   //Variable contador y valor inicial 
+  int contador = 0;   //Variable contador o valor inicial del while
   int numObreros;
   double numHoras, costoHora = 20, costoHoraExtra = 25, salarioExtra, salarioSemanal, salarioTotal;
 
@@ -20,7 +20,7 @@ void main() {
   print ("Ingrese numero de obreros:");
   numObreros = int.parse(stdin.readLineSync()!);
 
-  //PROCESOS - FORMULAS - SALIDA DATOS. 
+  //ENTRADA DATOS - PROCESOS FORMULAS - SALIDA DATOS. 
   while ( contador < numObreros ) {
     print ("Ingrese cantidad de horas de obrero " + (contador+1).toString());
     numHoras = double.parse(stdin.readLineSync()!);
@@ -28,7 +28,6 @@ void main() {
       salarioSemanal = numHoras * costoHora;
       print("El salario semanal del obrero " + (contador+1).toString());
       print("es de $salarioSemanal");
-      contador++;
     }
     else if ( numHoras > 40 ) {
            salarioExtra = numHoras - 40;
@@ -41,7 +40,7 @@ void main() {
            print ("es de $salarioSemanal");
            print ("El salario total semanal mas comisiones extra del obrero " + (contador+1).toString());
            print ("es de $salarioTotal");
-           contador++;
     }
+    contador++;     //Poner siempre el contador del while al final del ciclo while queda mucho mejor
   }
 }
