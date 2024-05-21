@@ -9,7 +9,7 @@ void main() {
   //DECLARACION VARIABLES
   int contador = 0;            //Variable Contador o valor inicial del while
   double suma = 0;             //Variable Acumulador 
-  int alumnos; 
+  int alumnos;                 //Variable para asignar la cantidad. Condicion de parada while.
   double califAlumno, promedioGrupo;
 
   //ENTRADA DATOS     //Imaginacion que este es el diagrama de flujo tic del profe

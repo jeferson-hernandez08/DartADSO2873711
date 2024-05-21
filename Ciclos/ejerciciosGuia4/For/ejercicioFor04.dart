@@ -8,7 +8,7 @@ void main() {
   */
 
   //DECLARACION VARIABLES
-  int cantAlumnos = 4;        //Variable para asignar la cantidad. Condicion de parada.
+  int cantAlumnos = 4;        //Variable para asignar la cantidad. Condicion de parada for.
   double suma = 0;            //Variable acumulador 
   double nota, promedio;
   double notaMenor = 9999;
