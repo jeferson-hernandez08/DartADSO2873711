@@ -13,7 +13,7 @@ void main() {
   double numMenor = 9999;
   double numMayor = 0;
 
-  //ENTRADA DATOS                                   //Terminar ponerle rango y verificar por que no da con mayor
+  //ENTRADA DATOS                                   //Terminar ponerle rango y verificar por que no da con mayor  //Prueba
   print ("Ingrese la cantidad de numeros:");
   cantNumeros = int.parse(stdin.readLineSync()!);    //Hay que transformar las variables (4 for).  
 
