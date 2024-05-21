@@ -11,24 +11,22 @@ void main() {
   int cantNumeros;              //Variable para asignar la cantidad. Condicion de parada while.
   double num;
   double numMenor = 9999;
-  double numMayor = 0;
 
   //ENTRADA DATOS 
   print ("Ingrese la cantidad de numeros:");
   cantNumeros = int.parse(stdin.readLineSync()!);    //Hay que transformar las variables (4 for).
 
-  //ENTRADA DATOS - PROCESOS FORMULAS - SALIDA DATOS.  
+  //PROCESOS FORMULAS - ENTRADA DATOS - SALIDA DATOS.  
   while ( contador < cantNumeros ) { 
     print ("Ingrese el numero ${contador+1}");
     num = double.parse(stdin.readLineSync()!);
     if ( num < numMenor) {
       numMenor = num;
     }
-    if ( num > numMenor) {
-      numMayor = num;
+    else {
+      numMenor = numMenor;
     }
     print("Hasta el momento el numero menor es: $numMenor");     //Validamos numero menor
-    // print("Hasta el momento el numero mayor es: $numMayor");
   contador++;
   }
   print("_____________________________________________________");

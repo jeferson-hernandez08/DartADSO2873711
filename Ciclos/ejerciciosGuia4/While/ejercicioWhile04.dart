@@ -13,7 +13,13 @@ void main() {
         9 o 0                     azul
   */
 
-   //DECLARACION VARIABLES     
+   //DECLARACION VARIABLES  
+
+
+   //ENTRADA DATOS 
+
+
+   //PROCESOS FORMULAS - ENTRADA DATOS - - SALIDA DATOS.     
  
 
 
