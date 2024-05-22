@@ -10,10 +10,14 @@ void main() {
        demás artículos, hasta que decide que ya tomo todo lo que necesitaba. Ayúdale a esta señora a
        obtener el total de sus compras.
   */
+
   //DECLARACION VARIABLES
   
 
-  //PROCESO FORMULA - SALIDA DATOS
+  //ENTRADA DATOS 
+  
+
+  //PROCESOS FORMULAS - ENTRADA DATOS - SALIDA DATOS.  
 
   
 
