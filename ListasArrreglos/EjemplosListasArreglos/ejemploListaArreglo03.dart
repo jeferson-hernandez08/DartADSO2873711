@@ -17,7 +17,7 @@ void main() {
   print(nombres);
 
   //Recorrer la lista parta mostrar elementos
-  for (int i=0; i < nombres.length; i++) {     //Para recorrer la lista
+  for (int i=0; i < nombres.length; i++) {     //Para recorrer la lista  //.length valida el tamaño de la lista o el numero de cajones
     print("Nombre #${i+1}: ${nombres[i]}");
 
   }

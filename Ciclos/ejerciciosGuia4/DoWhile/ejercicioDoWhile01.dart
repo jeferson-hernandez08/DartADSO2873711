@@ -11,7 +11,7 @@ void main() {
        obtener el total de sus compras.
   */
 
-  //DECLARACION VARIABLES
+  //DECLARACION VARIABLES  
   
 
   //ENTRADA DATOS 

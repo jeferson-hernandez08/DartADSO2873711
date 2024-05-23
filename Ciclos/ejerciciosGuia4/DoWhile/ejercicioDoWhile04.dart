@@ -11,34 +11,25 @@ void main() {
   */
 
   //DECLARACION VARIABLES     
-  int contador = 0;       //Variable Contador o valor inicial del while
+  int contador = 0;       //Variable Contador o valor inicial del while       ***************Otra opcion para hacer con Switch****************
   int persoEncuestadas;   //Variable para asignar la cantidad. Condicion de parada while.
   String? tipoEstudio, opcion;
   int primaria = 0, secundaria = 0, carreTecnica = 0, estudProfesionales = 0, estudPosgrado = 0;
   double porcenPrimaria, porcenSecundaria, porcentecnico, porcenProfesional, porcenPosgrado;
   
-
   //ENTRADA DATOS 
-  print("Ingrese la cantidad de personas encuentas");
+  print("Ingrese la cantidad de personas encuestadas:");
   persoEncuestadas = int.parse(stdin.readLineSync()!);
    
   //PROCESOS FORMULAS - ENTRADA DATOS - SALIDA DATOS. 
   do {
     print("Ingrese el tipo de estudio de persona # ${contador+1}");
-    tipoEstudio = stdin.readLineSync();
-    print("Desea continuar: SI (s) - NO (n)");
-    opcion = stdin.readLineSync();
-    if ( opcion == "n" ) {           //Para salir del programa
-      contador = persoEncuestadas;
+    tipoEstudio = stdin.readLineSync();                                                  //Validamos aqui si es diferente a las categorias.
+    while ( tipoEstudio != "primaria" && tipoEstudio != "secundaria" && tipoEstudio != "tecnico" && tipoEstudio != "profesional" && tipoEstudio != "posgrado" ) {  
+      print("Dato erroneo Ingrese nuevamente:");                                                                                
+      print("Ingrese el tipo de estudio de persona # ${contador+1}");
+      tipoEstudio = stdin.readLineSync();
     }
-    else {
-    // while ( tipoEstudio != "primaria" )  {  //Validamos si es diferente a las categorias
-    //   print("Dato erroneo Ingrese nuevamente:");
-    //   print("Ingrese el tipo de estudio de persona # ${contador+1}");
-    //   tipoEstudio = stdin.readLineSync();
-    //   print("Desea continuar: SI (s) - NO (n)");
-    //   opcion = stdin.readLineSync();
-    // }
       if ( tipoEstudio == "primaria") {
         primaria++;
         print("Personas de primaria va en $primaria");
@@ -58,9 +49,18 @@ void main() {
                     else if ( tipoEstudio == "posgrado" ) {
                           estudPosgrado++;
                           print("Personas de posgrado va en $estudPosgrado");
-                         } 
+                         }
+      //Validamos al mismo tiempo
+      print("Desea continuar: SI (s) - NO (n)");       //Este viene a lo ultimo 
+      opcion = stdin.readLineSync();
+      if ( opcion == "n" ) {           //Para salir del programa  
+        contador = persoEncuestadas;
+      }  
+      // else if ( opcion == "s" ) {   //Otra opcion (comentada).
+      //   contador++;
+      // }                   
     contador++;
-   }
+  //  }
   } 
   while ( contador < persoEncuestadas );
 
@@ -71,12 +71,14 @@ void main() {
   porcenPosgrado    = (estudPosgrado / persoEncuestadas) * 100;
 
   print("_______________________________________________");
+  print("La cantidad de personas encuentadas es: $persoEncuestadas");
   print("El total de personas de primaria es $primaria");
   print("El total de personas de secundaria es $secundaria");
   print("El total de personas tecnicas es $carreTecnica");
   print("El total de personas profesionales es de $estudProfesionales");
   print("El total de personas de posgrado es de $estudPosgrado");
   print("_______________________________________________");
+  print("La cantidad de personas encuentadas es: $persoEncuestadas");
   print("Porcentaje de personas de primaria $porcenPrimaria %");
   print("Porcentaje de personas de secundaria $porcenSecundaria %");
   print("Porcentaje de personas tecnicas $porcentecnico %");
