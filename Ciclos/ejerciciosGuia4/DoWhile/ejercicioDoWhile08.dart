@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
 //JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO DO WHILE 08.
   /*
@@ -7,26 +9,49 @@ void main() {
   */
 
   //DECLARACION VARIABLES 
-  int contador = 0;        //Variable Contador o valor inicial del while
-
-
-
+  String? caracterVocal;
+  int caracterA = 0, caracterE = 0, caracterI = 0, caracterO = 0, caracterU = 0;  //Variable contador
 
   //ENTRADA DATOS
+    // print("Ingrese la cantidad de caracteres:");
+    // cantCaracteres = int.parse (stdin.readLineSync()!);
   
-
-
-
-
   //ENTRADA DATOS - PROCESOS FORMULAS - SALIDA DATOS.
   do {
-    print("Ingrese la cantidad de caracteres:");
-
-
-
-
-  contador++;
+    print("Ingrese caracter vocal:");
+    caracterVocal = stdin.readLineSync();
+    
+      switch (caracterVocal) {
+        case 'a':
+          caracterA++;
+        break;
+        case 'e':
+          caracterE++;
+        break;
+        case 'i':
+          caracterI++;
+        break;
+        case 'o':
+          caracterO++;
+          break;
+        case 'u':
+          caracterU++;
+        break;
+        case '#':
+          print("'Hasta pronto'");
+        break;
+        default:
+        print("Opcion incorrecta.");
+        print("Ingrese caracter 'a,e,o,u' o '# para salir");    
+      }
   }
-  while ();
+  while ( caracterVocal != "#" );
+
+  print("Cantidad de vocales leídas es:");
+  print("a: $caracterA");
+  print("e: $caracterE");
+  print("i: $caracterI");
+  print("o: $caracterO");
+  print("u: $caracterU");
 
 }

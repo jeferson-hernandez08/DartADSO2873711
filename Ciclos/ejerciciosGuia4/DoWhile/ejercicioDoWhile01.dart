@@ -12,15 +12,34 @@ void main() {
   */
 
   //DECLARACION VARIABLES  
+  String? articulo, opcion;
+  int cantArticulo, contadorArticulos = 0, acumArticulos = 0;
+  double precio, totalArticulo, totalCompra = 0;
   
+  //ENTRADA DATOS - PROCESOS FORMULAS -  SALIDA DATOS.  
+  do {
+    print("Ingrese el articulo a comprar:");
+    articulo = stdin.readLineSync();
+    print("Ingrese las cantidad a compra:");
+    cantArticulo = int.parse(stdin.readLineSync()!);
+    print("Ingrese precio del articulo:");
+    precio = double.parse(stdin.readLineSync()!);
 
-  //ENTRADA DATOS 
-  
+    totalArticulo = cantArticulo * precio;
+    print("El total del articulo $articulo sera: $totalArticulo");
+    totalCompra += totalArticulo;    //Variable Acumulador
+    contadorArticulos++;             //Variable Contador
+    acumArticulos += cantArticulo;   //Variable Contador
+    print("Hasta el momento lleva $contadorArticulos Items de articulos");
+    print("La cantidad de articulos en total va en: $acumArticulos");
+    print("Desea ingresar otro articulo (Si) - (No):");
+    opcion = stdin.readLineSync();
+    print('*' * 50);
+  }
+  while (opcion!.toUpperCase() != "NO");   //!.toUpperCase(), es paraconverti todos los datos que se ingresen a mayusculas.
 
-  //PROCESOS FORMULAS - ENTRADA DATOS - SALIDA DATOS.  
-
-  
-
-
+  print("Señora, el total de la compra sera: $totalCompra");
+  print("Va a llevar en total: $contadorArticulos");
+  print("La cantidad de articulos en total va en: $acumArticulos");
 
 }

@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-//JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO DO WHILE 07.
+//JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO DO WHILE 09.
   /*
     9.  Escribir un programa que muestre el siguiente menú y que permita pasar magnitudes de grados a 
         radianes y de radianes a grados.
