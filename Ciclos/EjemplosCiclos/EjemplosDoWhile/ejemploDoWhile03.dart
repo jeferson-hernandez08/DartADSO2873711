@@ -19,7 +19,7 @@ void main() {
     if ( clave == "123") {
       print ("La clave es correcta bienvenido");
     }
-    else if {
+    else if (  clave == "123" ) {
           print ("La clave es incorrecta intente de nuevo");    //quedamos aqui. Meter si se hace mas de tres intentos de bloquea
           contador++;
           print ("$contador");
