@@ -1,6 +1,13 @@
 import 'dart:io';
 
 void main(List<String> args) {
+  //JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO LISTA/ARREGLO 02.
+  /*
+    1.  Calcular el promedio de 50 valores almacenados en un vector. Determinar además cuantos son
+        mayores que el promedio, imprimir el promedio, el número de datos mayores que el promedio y una
+        lista de valores mayores que el promedio.
+  */
+
   //Se define una lista vacia
   List<double> numeros = [];
   List<double> mayoresProm = [];
