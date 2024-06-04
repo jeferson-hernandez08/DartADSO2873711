@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   //JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO LISTA/ARREGLO 02.
   /*
@@ -7,18 +9,31 @@ void main() {
   */
   
   //DECLARACION/ASIGNACION VARIABLES LISTAS    
-  List<double> numeros1 = [];  //Difinicion de lista vacia
-  List<double> numeros2 = [];
-  int cantNumeros1 = 10;        //Variable para asignar la cantidad. Condicion de parada For.
-  int cantNumeros2 = 10;
-
-  //ENTRADA DATOS 
-
-
+  List<double> vectorA = [];  
+  List<double> vectorB = [];
+  List<double> vectorC = [];
+  int cantNumeros = 5;
+  double num;
 
   //PROCESOS FORMULAS - ENTRADA DATOS - SALIDA DATOS. 
+  for (var i = 0; i < cantNumeros; i++) {
+    print("Ingresa números enteros de la lista A #${i + 1}");
+    num = double.parse(stdin.readLineSync()!);
+    vectorA.add(num);                  //Agregamos numeros ingresados a vector A.
 
+    print("Ingresa números enteros de la lista B #${i + 1}");
+    num = double.parse(stdin.readLineSync()!);
+    vectorB.add(num);                 //Agregamos numeros ingresados a vector B.
 
-
-
+  }
+  for (var i = 0; i < cantNumeros; i++) {
+    vectorC.add(vectorA[i] + vectorB[i]);    //.add Realizacion de suma de vectores.
+  }
+  print("La lista A es:");
+  print(vectorA);
+  print("La lista B es:");
+  print(vectorB);
+  print("*" * 30);
+  print("La nueva lista C es:");
+  print(vectorC);
 }

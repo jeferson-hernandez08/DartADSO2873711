@@ -13,6 +13,7 @@ void main(List<String> args) {
   List<double> mayoresProm = [];
   int cantNumeros = 10;
   double num, sumaNumeros = 0, promedio;
+  
   //Ciclo para llenar el vector
   for (var i = 0; i < cantNumeros; i++){
     print("Ingrese número #${i+1}");
