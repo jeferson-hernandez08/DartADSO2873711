@@ -8,7 +8,7 @@ void main() {
   List <bool> estados = [true, false, false, true];
   List <double> estaturas = [1.65, 1.52, 1.55, 1.80];
 
-  //Definicion/Asignacion de lsitas dinamicas
+  //Definicion/Asignacion de listas dinamicas
   List <dynamic> listaDina = [30, 4.5, 'Pepe', true, ['Mango', 'Mora', frutas], pesos ];
 
   //Acceder a los elementos
