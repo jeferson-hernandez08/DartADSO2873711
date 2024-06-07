@@ -15,9 +15,9 @@ void main() {
   //Metodos ADD() - REMOVE() - REMOVEAT()
   List<int> numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   print(numeros2);
-  numeros2.remove(5);     // Elimina la pocision y reordena la lista. el numeroPara eliminar la pocision de un elemento de una lista.
+  numeros2.remove(5);     // Elimina la pocision. Para eliminar la pocision de un elemento de una lista.
   print(numeros2);
   print(numeros2[4]);
-  numeros2.removeAt(1);   //Elimina la posicion y continua con la lista.     //Amboas tienen el mismo resultado pero s ehace de dos formas
-  print(numeros2);
+  numeros2.removeAt(1);   //Elimina la pocision. Para eliminar la pocision de un elemento de una lista.
+  print(numeros2);                 //Ambas tienen el mismo resultado pero se hace de dos formas
 }
