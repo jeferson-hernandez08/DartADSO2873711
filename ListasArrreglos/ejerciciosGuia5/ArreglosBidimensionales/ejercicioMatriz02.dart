@@ -22,8 +22,6 @@ void main() {
     matriz.add(fila);
   }
 
-  
-
   //SALIDA DATOS
   print(matriz);
   //Imprimimos matriz
@@ -35,11 +33,5 @@ void main() {
   }
   print("");
   }
-
-
-
-
-
-
 
 }

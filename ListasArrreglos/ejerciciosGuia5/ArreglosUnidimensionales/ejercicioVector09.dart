@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   //JEFERSON MAURICIO HERNANDEZ LADINO - EJERCICIO LISTA/ARREGLO 09.
   /*
@@ -15,10 +17,52 @@ void main() {
   */
 
   //DECLARACION VARIABLES LISTAS 
-
+  List <String> nombresEmpleados = [];
+  List <int> edadesEmpleados = [];
+  List <double> sueldosEmpleados = [];
+  int cantEmpleados = 5;         //Cantidad de empleados.
+  int cantEdades = 5;
+  int cantSueldos = 5;
+  String empleado;
+  int edad;
+  double sueldo;
 
   //PROCESOS FORMULAS - ENTRADA DATOS - SALIDA DATOS. 
+  for ( int i = 0; i < cantEmpleados; i++ ) {      //Ciclo para cargar los nombres al vector.
+    print("Ingrese el empleado # ${i + 1 }: ");
+    empleado = stdin.readLineSync()!;
+    nombresEmpleados.add(empleado);
+    print("El vector va en :");
+    print(nombresEmpleados);
+  }
+
+  for ( int i = 0; i < cantEdades; i++ ) {    //Ciclo para cargar las edades al vector.
+    print("Ingrese edad del empleado # ${i + 1 } ${nombresEmpleados[i]}:");
+    edad = int.parse(stdin.readLineSync()!);
+    edadesEmpleados.add(edad);
+    print("El vector edades va en :");
+    print(edadesEmpleados);
+  }
+
+  for ( int i = 0; i < cantSueldos; i++) {
+    print("Ingrese sueldo del empleado # ${i + 1} ${nombresEmpleados[i]}:");
+    sueldo = double.parse(stdin.readLineSync()!);
+    sueldosEmpleados.add(sueldo);
+    print("El vector sueldos va en :");
+    print(sueldosEmpleados);
+  }
+
+  //SALIDA DATOS.
+  for ( int i = 0; i < nombresEmpleados.length; i++ ) {
+    print("Los datos del empleado # ${i+1}: ${nombresEmpleados[i]}, ${edadesEmpleados[i]}, ${sueldosEmpleados[i]}");
+
+
+
+  }
+
+
 
 
 
 }
+    
