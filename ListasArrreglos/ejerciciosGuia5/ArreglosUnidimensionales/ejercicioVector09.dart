@@ -13,7 +13,6 @@ void main() {
        Debe declarar un arreglo de enteros para la edad.
        Debe declarar un arreglo de reales para el sueldo.
        Debe declarar un arreglo de cadena para el nombre.
-
   */
 
   //DECLARACION VARIABLES LISTAS 
@@ -26,6 +25,7 @@ void main() {
   String empleado;
   int edad;
   double sueldo;
+  double sueldoMayor = 0;
 
   //PROCESOS FORMULAS - ENTRADA DATOS - SALIDA DATOS. 
   for ( int i = 0; i < cantEmpleados; i++ ) {      //Ciclo para cargar los nombres al vector.
@@ -44,25 +44,28 @@ void main() {
     print(edadesEmpleados);
   }
 
-  for ( int i = 0; i < cantSueldos; i++) {
+  for ( int i = 0; i < cantSueldos; i++) {    //Ciclo para cargar los sueldos al vector.
     print("Ingrese sueldo del empleado # ${i + 1} ${nombresEmpleados[i]}:");
     sueldo = double.parse(stdin.readLineSync()!);
     sueldosEmpleados.add(sueldo);
     print("El vector sueldos va en :");
     print(sueldosEmpleados);
   }
-
+  print('*' * 35);
+  
   //SALIDA DATOS.
   for ( int i = 0; i < nombresEmpleados.length; i++ ) {
     print("Los datos del empleado # ${i+1}: ${nombresEmpleados[i]}, ${edadesEmpleados[i]}, ${sueldosEmpleados[i]}");
-
-
-
   }
 
-
-
-
-
+  //Ciclo para determinar el sueldo mayor
+  for (int i = 0; i < nombresEmpleados.length; i++) {
+    if ( sueldosEmpleados[i] > sueldoMayor ) {   //Para ir comparando cual es el mayor del array uno a uno.
+      sueldoMayor = sueldosEmpleados[i];         //Se va transformando la variable si es mayor 
+      print("El empleado con mayor sueldo es: ${nombresEmpleados[i]}");
+      print("Su sueldo mayor es de: $sueldoMayor");    
+      print("Su edad es de : ${edadesEmpleados[i]} años.");
+    }
+  }
 }
     
