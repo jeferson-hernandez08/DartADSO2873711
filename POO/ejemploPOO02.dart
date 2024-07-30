@@ -32,7 +32,7 @@ class Persona {    //Nombre de la clase
 }
 
 void main() {
-  /***********************Primara forma************************** */
+  /***********************Primera forma************************** */
   Persona persona1; 
   persona1 = Persona("Jeferson", "M", 65, 26, 19951506);
 
