@@ -10,7 +10,7 @@ class Perro {  //Nombre de la clase
   // Constructor: Funcion que se ejecuta cuando se crea un objeto
   Perro(this.nombre, this.raza, this.peso);
 
-  // Perro(String nom, String raz, double peso) {  Manera de entender el constructor.
+  // Perro(String nom, String raz, double peso) {  Manera de entender el constructor. Para todos los lenguajes de programacion.
   //   this.nombre = nom;
   //   this.raz = raz;
   //   this.peso = peso;
