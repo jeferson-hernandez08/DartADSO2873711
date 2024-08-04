@@ -12,10 +12,15 @@ class Empleado {
 
   //Punto 3: Metodos. 
   //metodo aumentar salario
-  void aumentar(double porcentaje) {
+  void aumentarSalario(double porcentaje) {
+    double nuevoSalario = this.salario * porcentaje;
+    print("Su nuevo salario incrementado es: $nuevoSalario");
+  }
 
-
-    
+  //Metodo cumplir años.
+  void cumplirAnios() {
+    int nuevaEdad = this.edad + 1;
+    print("La nueva es de: $nuevaEdad");
   }
 
 
