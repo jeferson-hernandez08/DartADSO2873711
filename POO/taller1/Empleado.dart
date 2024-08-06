@@ -13,24 +13,45 @@ class Empleado {
   //Punto 3: Crecion de Metodos. 
   //metodo aumentar salario
   void aumentarSalario(double porcentaje) {
-    double incrementoSalario = this.salario * porcentaje;
-    double nuevoSalario = incrementoSalario + this.salario;
+    double incrementoSalario, nuevoSalario;
+    incrementoSalario = this.salario * porcentaje / 100;
+    nuevoSalario = incrementoSalario + this.salario;
+    this.salario = nuevoSalario;  //Actualizamos el atributo
     print("Su nuevo salario incrementado es: $nuevoSalario");
+    //Otra forma realizarlo estandar Profe
+    //this.salario += (this.salario * porcentaje) / 100;
+    //print("Su nuevo salario incrementado es: $this.salario");
   }
 
   //Metodo cumplir años.
   void cumplirAnios() {
     int nuevaEdad = this.edad + 1;
+    this.edad = nuevaEdad;
     print("La nueva es de: $nuevaEdad");
+    //Otra forma realizarlo estandar Profe
+    //this.edad++;
+    //return this.edad;
   }
 
   //Metodo cambiar puesto. 
-  void cambiarPuesto(String nuevoPuesto) {
-    print("El nuevo puesto del empleado es: $nuevoPuesto");
+  String cambiarPuesto(String nuevoPuesto) {
+    //Otra forma realizarlo estandar Profe
+    this.puesto = nuevoPuesto;
+    return this.puesto;
+    //print("El nuevo puesto del empleado es: $nuevoPuesto");
   }
 
   //Metodo mostrar informacion. 
   void mostrarInformacion() {
+    //Otra forma realizarlo estandar Profe
+    print("""
+        Nombre: $nombre.
+        Edad: $edad.
+        Salario: $salario.
+        Puesto: $puesto.
+        tipoContrato $tipoContrato
+    """);
+    //Forma larga
     print("El nombre del empleado es: $nombre");
     print("La edad del empleado es: $edad");
     print("El salario del empleado es: $salario");
@@ -39,28 +60,23 @@ class Empleado {
   }
 
   //Metodo bonificacion
-  void calcularBonificacion(String tipoContrato) {
-    String tipoContrato1 = "Contratista"; 
-    String tipoContrato2 = "Temporal"; 
-    String tipoContrato3 = "Indefinido"; 
-
-    if (tipoContrato == tipoContrato1) {
-      double bonifiContratista = this.salario * 0.10;
-      double nuevoSalario = bonifiContratista + this.salario;
-      print("Su bonificacion como contratista es de: $nuevoSalario");
+  double calcularBonificacion() {
+    //Otra forma realizarlo estandar Profe
+    if (this.tipoContrato.toLowerCase() == "contratista") {
+      print("Se metio por contratista");
+      return this.salario = this.salario + this.salario * 0.1;
     }
-    else if (tipoContrato == tipoContrato2) {
-            double bonifiTemporal = this.salario * 0.05;
-            double nuevoSalario = bonifiTemporal + this.salario;
-            print("Su bonificacion como temporal es de: $nuevoSalario");
+    else if (this.tipoContrato.toLowerCase() == "temporal") {
+            print("Se metio por temporal Prueba");
+            return this.salario = this.salario + this.salario * 0.05;        
           }
-          else if (tipoContrato == tipoContrato3) {
-                  double bonifiIndefinido = this.salario * 0.15;
-                  double nuevoSalario = bonifiIndefinido + this.salario;
-                  print("Su bonificacion como indefinido es de: $nuevoSalario");
+          else if (this.tipoContrato.toLowerCase() == "indefinido") {
+                  print("Se metio por indefinido");
+                  return this.salario = this.salario + (this.salario * 0.15);        
                 }
                 else {
-                  print("Fuera de rango no pertenece al tipo de contrato");
+                  return 0;
                 }
+    
   }
 }

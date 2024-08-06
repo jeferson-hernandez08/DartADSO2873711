@@ -5,11 +5,32 @@ class Vehiculo {
   
    //Constructor Clase Vehiculo
    Vehiculo(this.color, this.velocidad, this.tamanio) {} //Forma corta solo el lenguaje Dart 
-  //  Vehiculo(String col, int vel, double tam) {  Segunda forma de hacerlo en cualquier lenguaje de programacion.
-  //   this.color = col;
-  //   this.velocidad = vel;
-  //   this.tamanio = tam;
+   //  Vehiculo(String col, int vel, double tam) {  Segunda forma de hacerlo en cualquier lenguaje de programacion.
+   //   this.color = col;
+   //   this.velocidad = vel;
+   //   this.tamanio = tam;
+   //  }
+
+   //Metodos SET y GET
+   //Setea o asigna un nuevo valor para el atributo color 
+   void setColor(String newColor){
+      this.color = newColor;
+   }
+  //  void setColor2(String color){
+  //     color = color;
   //  }
+  void setVelocidad(int newvelocidad){
+      this.velocidad = newvelocidad;
+   }
+
+   //Get Perimite obtener el valor del atributo color 
+   String getColor() {
+    return this.color;
+   }
+
+   int getVelocidad() {
+    return this.velocidad;
+   }
     
    //Metodo Avanzar
    void avanzar(int velAvanz) {
