@@ -7,7 +7,7 @@ class Empleado {
   String puesto;
   String tipoContrato;
 
-  //Punto 2: Constructor clase vehiculo. 
+  //Punto 2: Constructor clase vehiculo. Prueba git hub
   Empleado(this.nombre, this.edad, this.salario, this.puesto, this.tipoContrato);
 
   //Punto 3: Crecion de Metodos. 
