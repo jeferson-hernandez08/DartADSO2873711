@@ -23,6 +23,10 @@ class Vehiculo {
       this.velocidad = newvelocidad;
    }
 
+   void setTamanio(double newTamanio){
+      this.tamanio = newTamanio;
+   }
+
    //Get Perimite obtener el valor del atributo color 
    String getColor() {
     return this.color;
@@ -30,6 +34,10 @@ class Vehiculo {
 
    int getVelocidad() {
     return this.velocidad;
+   }
+
+   double getTamanio() {
+    return this.tamanio;
    }
     
    //Metodo Avanzar
