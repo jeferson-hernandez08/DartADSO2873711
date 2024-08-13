@@ -15,14 +15,4 @@ void main() {
   myCar.setTamanio(3.85);
   print("El auto cambió de tamaño a ${myCar.getTamanio()}");
 
-  
-  
-
-
-
-
-
-
-
-
 }

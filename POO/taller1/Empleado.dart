@@ -1,16 +1,16 @@
 class Empleado {
 
-  //Punto 1: Declaracionde variables
+  //*******Punto 1: Declaracion de variables*******
   String nombre; 
   int edad;
   double salario;
   String puesto;
   String tipoContrato;
 
-  //Punto 2: Constructor clase vehiculo. Prueba git hub
+  //*********Punto 2: Constructor clase vehiculo.*******
   Empleado(this.nombre, this.edad, this.salario, this.puesto, this.tipoContrato);
 
-  //Punto 3: Crecion de Metodos. 
+  //********Punto 3: Crecion de Metodos.*******
   //metodo aumentar salario
   void aumentarSalario(double porcentaje) {
     double incrementoSalario, nuevoSalario;
@@ -40,7 +40,8 @@ class Empleado {
     return this.puesto;
     //print("El nuevo puesto del empleado es: $nuevoPuesto");
   }
-
+  
+  //*********Punto 5: Mostrar informacion *********
   //Metodo mostrar informacion. 
   void mostrarInformacion() {
     //Otra forma realizarlo estandar Profe

@@ -39,7 +39,7 @@ void main() {
 
     //Se instancia la clese vehiculo y se crea el objeto con los valores del usuario
     Empleado empelado_obj = Empleado(nombre, edad, salario, puesto, tipoContrato);   //Variable tipo clase, luego esta variable clase la llamamos hacia el constructor
-                                                                                     //para que guarden las variables ingresadas. Sin esto no funciona nada.
+                                                                                    //para que guarden las variables ingresadas. Sin esto no funciona nada.
     //Se añade le vehiculo a la lista                                                 
     listaEmpleados.add(empelado_obj);                            //Agregamos a la listaEmpleados las variables del constructor.
   }
@@ -48,6 +48,7 @@ void main() {
   mostrarListaEmpleados(listaEmpleados,cantPersonas);  //Reutilizamos la variable lista y variable 
 }
 
+//*********Punto 6: Probar varios empleados ********/
 void mostrarListaEmpleados(List<Empleado> listaEmpleados, cantPersonas) {   //Lmamamos variable Forma # 3 de hacerlo.
   //int cantPersonas = 2;   Copiamos y pegamos esta variable aqui Forma # 1.
   //Ciclo para recorrer elementos(objetos) de la lista y llamar los metodos.
