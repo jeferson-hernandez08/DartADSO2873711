@@ -5,7 +5,8 @@ import 'Persona.dart';
 
 void main() {
   //Creamos los objetos. 
-  //Creamos un objeto instancia de clase persona. 
+  //********************************************** */
+  //Creamos un objeto instancias de la clase persona. 
   String nombre; 
   int edad; 
 
@@ -15,6 +16,9 @@ void main() {
   edad = int.parse(stdin.readLineSync()!);
   Persona persona1 = Persona(nombre, edad); 
   persona1.mostrarInfoPersona();
+
+  //************************************************ */
+  //Creamos un objeto instancias de la clase Futbolista. 
   
   
 }
