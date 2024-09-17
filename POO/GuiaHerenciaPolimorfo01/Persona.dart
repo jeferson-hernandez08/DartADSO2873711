@@ -2,7 +2,7 @@ class Persona {
   String _nombre; 
   int _edad; 
 
-  ////Constructor Clase Vehiculo
+  //Constructor Clase Persona
   Persona(this._nombre, this._edad);
 
   void setNombre(String nuevoNombre) {

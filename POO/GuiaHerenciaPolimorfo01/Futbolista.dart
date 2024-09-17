@@ -6,7 +6,7 @@ class Futbolista extends Persona {
   int cantGoles; 
 
   //Constructor Clase Futboliosta
-  Futbolista(String _nombre, int _edad, this._equipo, this._posicion, this.cantGoles, ) : super (_nombre, _edad);
+  Futbolista(this._equipo, this._posicion, this.cantGoles, String _nombre, int _edad) : super (_nombre, _edad);
 
   void setEquipo(String nuevoEquipo) {
     this._equipo = nuevoEquipo;
@@ -34,7 +34,7 @@ class Futbolista extends Persona {
 
 
   void mostrarInfo() {
-    this.mostrarInfoPersona();
+    this.mostrarInfoPersona();  //Heredamos de persona. 
     print("""
             Equipo: $_equipo
             Pocision: $_posicion
