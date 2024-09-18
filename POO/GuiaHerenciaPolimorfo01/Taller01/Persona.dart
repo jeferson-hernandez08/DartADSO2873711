@@ -2,7 +2,7 @@ class Persona {
   String _nombre; 
   int _edad; 
 
-  //Constructor Clase Persona
+  //Constructor Clase Persona.
   Persona(this._nombre, this._edad);
 
   void setNombre(String nuevoNombre) {
@@ -22,10 +22,9 @@ class Persona {
   }
 
   void mostrarInfoPersona() {
-     print(""" 
-            Nombre: $_nombre
-            Edad: $_edad
+    print(""" 
+           Nombre: $_nombre
+           Edad: $_edad
           """);
   }
-
 }

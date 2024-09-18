@@ -5,7 +5,7 @@ class Futbolista extends Persona {
   String _posicion; 
   int cantGoles; 
 
-  //Constructor Clase Futboliosta
+  //Constructor Clase Futbolista.
   Futbolista(this._equipo, this._posicion, this.cantGoles, String _nombre, int _edad) : super (_nombre, _edad);
 
   void setEquipo(String nuevoEquipo) {
@@ -32,14 +32,23 @@ class Futbolista extends Persona {
     return this.cantGoles;
   }
 
+  bool esTitular (){
+    if(cantGoles > 5) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 
-  void mostrarInfo() {
-    this.mostrarInfoPersona();  //Heredamos de persona. 
+  void mostrarInfoFutbolista() { 
+    // this.mostrarInfoPersona();   //Hereda de persona
     print("""
-            Equipo: $_equipo
-            Pocision: $_posicion
-            Cantidad de Goles: $cantGoles
-         """);
+           Equipo: $_equipo
+           Posicion: $_posicion
+           Cantidad de Goles: $cantGoles
+           Es titular: ${esTitular()==true ? "si" : "no"}    
+         """);      //Socializado por el profe. 
   }
 
   

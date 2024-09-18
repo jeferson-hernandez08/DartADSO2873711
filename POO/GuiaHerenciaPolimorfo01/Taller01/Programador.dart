@@ -4,6 +4,7 @@ class Programador extends Persona {
   String _empresa;
   double _salario;
 
+  //Constructor Clase Programador.
   Programador(this._empresa, this._salario, String _nombre, int _edad) : super (_nombre, _edad);
 
   void setEmpre(String nuevaempresa) {
@@ -23,17 +24,18 @@ class Programador extends Persona {
     return this._salario;
   }
 
-  void obtenerSalarioNeto() {
+  double obtenerSalarioNeto() {
+    this._salario = this._salario - (this._salario * 0.11);
+    return this._salario;
 
   }
 
-  void mostrarInfoProgrador() {
-    this.mostrarInfoPersona();  //Heredamos de persona. 
+  void mostrarInfoProgramador() {
+    //this.mostrarInfoPersona();  //Heredamos de persona. 
     print("""
             Empresa: $_empresa
             Salario: $_salario;
+            Salario Neto: ${obtenerSalarioNeto()}
          """);
   }
-
-
 }

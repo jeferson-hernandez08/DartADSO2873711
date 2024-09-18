@@ -20,7 +20,7 @@ void main() {
 
   Persona persona1 = Persona(nombreUsu, edadUsu); 
 
-   print("!Excelente¡, La persona se han creado satisfactoriamente");
+  print("!Excelente¡, La persona se han creado satisfactoriamente");
   print("Persona:");
   persona1.mostrarInfoPersona();
 
@@ -37,7 +37,7 @@ void main() {
   int edadUsu1;
   int edadUsu2;
 
-  print("Ahora vamos a crear dos futbolistas");
+  print("Ahora vamos a crear dos futbolistas:");
   print("Ingrese el equipo que pertenece el futbolista # 1:");
   equipoUsu1 = stdin.readLineSync()!;
   print("Ahora ingrese el equipo que pertenece el futbolista # 2:");
@@ -48,7 +48,7 @@ void main() {
   pocisionUsu2 = stdin.readLineSync()!;
   print("Ahora ingrese la cantidad de goles que tiene el futbolista # 1:");
   canGolesUsu1 = int.parse(stdin.readLineSync()!);
-  print("Ahora ingrese la cantiadd de goles que tiene el futbolista # 2:");
+  print("Ahora ingrese la cantidad de goles que tiene el futbolista # 2:");
   canGolesUsu2 = int.parse(stdin.readLineSync()!);
   print("Cual es el nombre del futbolista # 1:");
   nombreUsu1 = stdin.readLineSync()!;
@@ -65,9 +65,11 @@ void main() {
 
   print("!Excelente¡, los futbolistas se han creado satisfactoriamente");
   print("Futbolista # 1:");
-  futbolista1.mostrarInfo();
+  futbolista1.mostrarInfoPersona();  
+  futbolista1.mostrarInfoFutbolista();
   print("Futbolista # 2:");
-  futbolista2.mostrarInfo();
+  futbolista2.mostrarInfoPersona();  
+  futbolista2.mostrarInfoFutbolista();
 
   //**********************************************************************************/
   //Creamos dos objetos instancias de la clase Programador ingresados por el usuario. 
@@ -80,10 +82,10 @@ void main() {
   int edadUsuEntre1;
   int edadUsuEntre2;
 
-  print("Ahora vamos a crear dos programadores");
-  print("Ingrese la empresa que pertenece el entrenador # 1:");
+  print("Ahora vamos a crear dos programadores:");
+  print("Ingrese la empresa que pertenece del programador # 1:");
   empresaUsu1 = stdin.readLineSync()!;
-  print("Ingrese la empresa que pertenece el entrenador # 2:");
+  print("Ingrese la empresa que pertenece el programador # 2:");
   empresaUsu2 = stdin.readLineSync()!;
   print("Ahora ingrese el salario del programador # 1:");
   salarioUsu1 = double.parse(stdin.readLineSync()!);
@@ -93,27 +95,21 @@ void main() {
   nombreUsuEntre1 = stdin.readLineSync()!;
   print("Cual es el nombre del programador # 2:");
   nombreUsuEntre2 = stdin.readLineSync()!;
-  print("Cual la edad del futbolista # 1:");
+  print("Cual la edad del programador # 1:");
   edadUsuEntre1 = int.parse(stdin.readLineSync()!);
-  print("Cual la edad del futbolista # 2:");
+  print("Cual la edad del programador # 2:");
   edadUsuEntre2 = int.parse(stdin.readLineSync()!);
   print("-------------------------------------------------------------------------------");
 
   Programador programador1 = Programador(empresaUsu1, salarioUsu1, nombreUsuEntre1, edadUsuEntre1);
   Programador programador2 = Programador(empresaUsu2, salarioUsu2, nombreUsuEntre2, edadUsuEntre2);
 
-  print("!Excelente¡, los programador se han creado satisfactoriamente");
+  print("!Excelente¡, los dos programadores se han creado satisfactoriamente");
   print("Programador # 1:");
-  programador1.mostrarInfoProgrador();
+  programador1.mostrarInfoPersona();
+  programador1.mostrarInfoProgramador();
   print("Programador # 2:");
-  programador2.mostrarInfoProgrador();
+  programador2.mostrarInfoPersona();
+  programador2.mostrarInfoProgramador();
 
-
-
-
-
-
-
-  
-  
 }
