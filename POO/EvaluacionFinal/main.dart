@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 import 'Gato.dart';
 import 'Perro.dart';
 
@@ -16,6 +17,8 @@ void main() {
   int opcion;
 
   print("Bienvenido a la veterinara!");
+
+  //*****************Perros********************//
   print("Vamos a ingresar las mascotas perrunos:");
   print("Ingrese la cantidad de perros:");
   cantMascotas = int.parse(stdin.readLineSync()!);
@@ -36,7 +39,9 @@ void main() {
     print("Ingrese si el perro # ${i+1} $nombreMascota esta estirilizado:");
     estirilizadoMascota = stdin.readLineSync()!;
 
-    Perro perro = Perro(nombreMascota, edadMascota, tipoMascota, razaMascota, pesoMascota, colorMascota, estirilizadoMascota);
+    String codigoMascota = generarCodigo(tipoMascota);  //IA
+
+    Perro perro = Perro(nombreMascota, edadMascota, tipoMascota, razaMascota, pesoMascota, colorMascota, estirilizadoMascota, codigoMascota);  //IA
 
     listaPerros.add(perro);
     print("Se ha creado el Perro # ${i + 1} satisfactoriamente:");
@@ -73,7 +78,9 @@ void main() {
     print("Ingrese si el perro # ${i+1} $nombreMascota esta estirilizado:");
     estirilizadoMascota = stdin.readLineSync()!;
 
-    Gato gato = Gato(nombreMascota, edadMascota, tipoMascota, razaMascota, pesoMascota, colorMascota, estirilizadoMascota);
+    String codigoMascota = generarCodigo(tipoMascota);  //IA
+
+    Gato gato = Gato(nombreMascota, edadMascota, tipoMascota, razaMascota, pesoMascota, colorMascota, estirilizadoMascota, codigoMascota); //IA
 
     listaGatos.add(gato);
     print("Se ha creado el gato # ${i+1} satisfactoriamente:");
@@ -123,7 +130,14 @@ void main() {
     }
   }
   while (opcion != 3);
-
-
-
 }
+
+//IA
+String generarCodigo(String tipo) {
+  Random random = Random();
+  String inicial = tipo.isNotEmpty ? tipo[0].toUpperCase() : 'X'; // Si el tipo está vacío, usar 'X' como inicial
+  int numeroAleatorio = random.nextInt(100000); // Número entre 0 y 99999
+  return '$inicial-${numeroAleatorio.toString().padLeft(5, '0')}'; // Asegura que el número tenga 5 cifras
+}
+
+//Terminar Menu Mascotas.

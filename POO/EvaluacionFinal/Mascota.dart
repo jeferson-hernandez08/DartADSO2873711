@@ -6,9 +6,10 @@ class Mascota {
   double peso;
   String color;
   String estirilizado;
+  String codigo;      //Agregamos el codigo a la clase mascota //IA
 
   //Constructor Clase Mascota.}
-  Mascota(this.nombre, this.edad, this.tipoMascota, this.raza, this.peso, this.color, this.estirilizado);
+  Mascota(this.nombre, this.edad, this.tipoMascota, this.raza, this.peso, this.color, this.estirilizado, this.codigo); //IA
 
   void setnombre(String nuevoNombre) {
     this.nombre = nuevoNombre;
@@ -64,6 +65,18 @@ class Mascota {
 
   String getEstirilizado() {
     return this.estirilizado;
+  }
+
+  void mostrarInfo() {
+      print("""Código: $codigo   
+Nombre del perro: $nombre
+edad del perro: $edad
+Tipo de mascota: $tipoMascota
+Raza del perro: $raza
+Peso del perro: $peso
+Color del perro: $color
+Estirilizado: $estirilizado
+""");
   }
 
 }
