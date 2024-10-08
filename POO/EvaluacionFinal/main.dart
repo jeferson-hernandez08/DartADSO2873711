@@ -141,3 +141,8 @@ String generarCodigo(String tipo) {
 }
 
 //Terminar Menu Mascotas.
+
+// 1. Mostrar informacion de todas las mascotas. 
+// 2. Buscar una mascota por el nombre y mostrar toda la informacion. 
+// 3. Mostrar cuantas mascotas estan esterilizados. 
+// 4. Mostrar cuantas mascotas tienen mas de 5 años. 
