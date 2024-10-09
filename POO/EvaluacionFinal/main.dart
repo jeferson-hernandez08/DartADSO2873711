@@ -144,6 +144,7 @@ void main() {
         while (opcion != 3);
       break;
       case 2:
+        buscarMascotaPorNombre(listaPerros);
         
       break;
       case 5:
@@ -163,6 +164,38 @@ String generarCodigo(String tipo) {
   String inicial = tipo.isNotEmpty ? tipo[0].toUpperCase() : 'X'; // Si el tipo está vacío, usar 'X' como inicial
   int numeroAleatorio = random.nextInt(100000); // Número entre 0 y 99999
   return '$inicial-${numeroAleatorio.toString().padLeft(5, '0')}'; // Asegura que el número tenga 5 cifras
+}
+
+//Buscar mascota por el nombre 
+void buscarMascotaPorNombre(List<Perro> listaPerros) {
+  print('Ingrese el nombre de la mascota a buscar:');
+  String nombreBusqueda = stdin.readLineSync()!.toLowerCase();
+
+  bool encontrada = false;
+
+  for (var perro in listaPerros) {
+    if (perro.nombre.toLowerCase() == nombreBusqueda) {
+      print('Mascota encontrada (Perro):');
+      perro.mostrarInfo();
+      encontrada = true;
+      break;
+    }
+  }
+
+  // if (!encontrada) {
+  //   for (var gato in gatos) {
+  //     if (gato.nombre.toLowerCase() == nombreBusqueda) {
+  //       print('Mascota encontrada (Gato):');
+  //       gato.mostrarInfo();
+  //       encontrada = true;
+  //       break;
+  //     }
+  //   }
+  // }
+
+  if (!encontrada) {
+    print('No se encontró ninguna mascota con ese nombre.');
+  }
 }
 
 //Terminar Menu Mascotas.

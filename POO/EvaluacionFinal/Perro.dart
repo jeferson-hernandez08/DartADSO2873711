@@ -6,7 +6,7 @@ class Perro extends Mascota {
   Perro(nombre, edad, tipoMascota, raza, peso, color, estirilizado, codigo) : super(nombre, edad, tipoMascota, raza, peso, color, estirilizado, codigo); //IA
 
   void mostrarInfoPerro() {
-    mostrarInfo();   // Usar el método general de mostrar información - Heredamos de mascota. IA
+    mostrarInfo();   // Usar el método general de mostrar información - Heredamos de mascota. O super.mostrarInfo(); IA
 //     print("""Código: $codigo   //Para evitar la repeticion de codigo
 // Nombre del perro: $nombre
 // edad del perro: $edad
