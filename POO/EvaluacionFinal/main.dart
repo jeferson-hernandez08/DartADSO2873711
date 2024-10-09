@@ -98,30 +98,55 @@ void main() {
   //Menu Mascotas. 
   print("*" * 100);
   do {
+    print("_________________________________________________________");
     print("Menu de mascotas:");
-    print("1. Menu de Perros");
-    print("2. Menu de Gatos");
-    print("3. Para salir.");
+    print("1. Mostrar informacion de mascotas.");
+    print("2. Buscar mascota por nombre y mostrar informacion.");
+    print("3. Mostrar mascotas esterilizadoas.");
+    print("4. Mostrar mascotas con mas de 5 años.");
+    print("5. Para salir.");
     opcion = int.parse(stdin.readLineSync()!);
 
     switch (opcion) {
       case 1:
-        print("*" * 100);
-        print("Lista de perros:");
-        for (int i = 0; i < listaPerros.length; i++) {
-          print("Perro # ${i+1}:");
-          listaPerros[i].mostrarInfoPerro();
+        do {
+          print("_________________________________________________________");
+          print("1. Mostrar informacion de perros.");
+          print("2. Mostrar informacion de gatos");
+          print("3. Para menu principal");
+          opcion = int.parse(stdin.readLineSync()!);
+
+          switch (opcion) {
+            case 1:
+              print("*" * 100);
+              print("Lista de perros:");
+              for (int i = 0; i < listaPerros.length; i++) {
+                print("Perro # ${i+1}:");
+                listaPerros[i].mostrarInfoPerro();
+              }
+            break;
+            case 2: 
+              print("*" * 100);
+              print("Lista de gatos:");
+              for (int i = 0; i < listaGatos.length; i++) {
+                print("Gato # ${i+1}:");
+                listaGatos[i].mostrasInfoGato();
+              }
+            break;
+            case 9:
+              print("Volviendo al menu principal");
+            break;
+            default:
+              print("Ingrese la opcion correcta.");
+            break;
+          }
         }
+        while (opcion != 3);
       break;
       case 2:
-        print("*" * 100);
-        print("Lista de gatos:");
-        for (int i = 0; i < listaGatos.length; i++) {
-          print("Gato # ${i+1}:");
-          listaGatos[i].mostrasInfoGato();
-        }
+        
       break;
-      case 3:
+      case 5:
         print("Hasta la proxima");
       break;
       default:
@@ -129,7 +154,7 @@ void main() {
       break;
     }
   }
-  while (opcion != 3);
+  while (opcion != 5);
 }
 
 //IA
