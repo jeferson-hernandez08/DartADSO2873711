@@ -133,7 +133,7 @@ void main() {
                 listaGatos[i].mostrasInfoGato();
               }
             break;
-            case 9:
+            case 3:
               print("Volviendo al menu principal");
             break;
             default:
@@ -144,8 +144,29 @@ void main() {
         while (opcion != 3);
       break;
       case 2:
-        buscarMascotaPorNombre(listaPerros);
-        
+        do {
+          print("_________________________________________________________");
+          print("1. Mostrar mascota por nombre perro.");
+          print("2. Mostrar mascota por nombre gato");
+          print("3. Para volver a menu principal");
+          opcion = int.parse(stdin.readLineSync()!);
+
+          switch (opcion) {
+            case 1:
+              buscarMascotaPorNombre(listaPerros);
+            break;
+            case 2:
+
+            break;
+
+            case 3:
+              print("Volviendo al menu principal...");
+            break;
+            default:
+              print("Ingrese la opcion correcta");
+            break;
+          }
+        } while(opcion != 3);
       break;
       case 5:
         print("Hasta la proxima");
@@ -158,7 +179,7 @@ void main() {
   while (opcion != 5);
 }
 
-//IA
+//Codigo automaticamente para mascota. IA
 String generarCodigo(String tipo) {
   Random random = Random();
   String inicial = tipo.isNotEmpty ? tipo[0].toUpperCase() : 'X'; // Si el tipo está vacío, usar 'X' como inicial
@@ -173,9 +194,9 @@ void buscarMascotaPorNombre(List<Perro> listaPerros) {
 
   bool encontrada = false;
 
-  for (var perro in listaPerros) {
-    if (perro.nombre.toLowerCase() == nombreBusqueda) {
-      print('Mascota encontrada (Perro):');
+  for (var perro in listaPerros) {  //For para recorre cada elemento de la lista. // En cada iteración,
+    if (perro.nombre.toLowerCase() == nombreBusqueda) {                           // la variable perro toma el valor de un elemento de la lista perros.
+      print('Mascota encontrada (Perro $nombreBusqueda):');
       perro.mostrarInfo();
       encontrada = true;
       break;
@@ -198,7 +219,7 @@ void buscarMascotaPorNombre(List<Perro> listaPerros) {
   }
 }
 
-//Terminar Menu Mascotas.
+//Terminar Menu Mascotas...
 
 // 1. Mostrar informacion de todas las mascotas. 
 // 2. Buscar una mascota por el nombre y mostrar toda la informacion. 
