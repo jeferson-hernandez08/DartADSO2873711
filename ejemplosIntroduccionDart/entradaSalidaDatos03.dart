@@ -3,7 +3,7 @@ import 'dart:io';
 void main() {
   print ("Ejemplo 03 - Entrada/Salida:");
 
-  //DIFICION VARIABLES
+  //DIFINICION VARIABLES
   double nota1, nota2, nota3, promedio;
 
   //ENTRADA DATOS

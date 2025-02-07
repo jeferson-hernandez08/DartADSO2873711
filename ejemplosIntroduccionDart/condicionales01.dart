@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   //CONDICIONAL SIMPLE
   print ("CONDICINAL SIMPLE");
@@ -16,8 +14,7 @@ void main() {
   bool esMayor = true;     //DEFINICION Y ASIGNACION
   if (esMayor == false) {   //SI
      print("Es mayor de edad");
-  } 
-  else { //SINO
+  } else { //SINO
     print("Es menor de edad");
   }
   print("**************************");
@@ -27,8 +24,7 @@ void main() {
   double nota = 4.5;     //DEFINICION Y ASIGNACION
   if (nota >= 3) {   //SI
      print ("Usted aprobo el examen");
-  } 
-  else { //SINO
+  } else { //SINO
     print ("Usted no aprobo el examen");
   }
 
@@ -64,7 +60,7 @@ void main() {
     case 1:
       print("TRIMESTRE 1");
       print("Fase de requerimientos");
-      break;
+      break;   // break significa rompe y se sale del switch
     case 2:
       print("TRIMESTRE 2");
       print("Fase de analisis");

@@ -33,17 +33,17 @@ void main() {
           grados = double.parse(stdin.readLineSync()!);
           resultado = grados * (pi / 180);      //formula grados a radianes
           print("Los $grados grados ingresados son $resultado radianes");
-      break;
+          break;
       case 2:
           print("2. Vamos a convertir de radianes a grados:");
           print("Ingrese los radianes");
           radianes = double.parse(stdin.readLineSync()!);
           resultado = radianes * (180 / pi);    //formula radianes a grados
           print("Los $radianes radianes ingresados son $resultado grados"); 
-        break;
+          break;
       case 3:
           print("'Hasta pronto'");
-      break;
+          break;
       default:
         print("Opcion incorrecta, Ingrese una opcion del 1 al 3.");
     }

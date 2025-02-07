@@ -4,7 +4,7 @@ void main() {
   int cantExamenes; //Definicion Variables
   cantExamenes = 3; //Asignacion Variables
   int cantEstudiantes = 30; //Definicion y Asignacion Variables
-  print("La cantidad de estudiantes es $cantEstudiantes");
+  print("La cantidad de estudiantes es ${cantEstudiantes}");      // Se puede concatenar así las variables como JavaScript ${cantEstudiantes}
   print("Deben presentar $cantExamenes examenes");
 
   print("****************************************");

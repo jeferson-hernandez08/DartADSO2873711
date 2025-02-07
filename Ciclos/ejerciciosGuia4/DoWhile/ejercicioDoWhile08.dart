@@ -39,10 +39,10 @@ void main() {
         break;
         case '#':
           print("'Hasta pronto'");
-        break;
+          break;
         default:
-        print("Opcion incorrecta.");
-        print("Ingrese caracter 'a,e,o,u' o '# para salir");    
+          print("Opcion incorrecta.");
+          print("Ingrese caracter 'a,e,o,u' o '# para salir");    
       }
   }
   while ( caracterVocal != "#" );

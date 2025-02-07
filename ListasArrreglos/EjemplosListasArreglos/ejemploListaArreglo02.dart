@@ -9,6 +9,7 @@ void main() {
 
   //Propiedad length - Tamaño
   print("Tamaño de la Lista: ${numeros.length}");
+  print(numeros.length);                                     // Forma directa de tamaño de lista.
   print("Ultimo elemento: ${numeros[numeros.length - 1]}");
   print("Ultimo elemento: ${numeros.last}");
 
