@@ -10,22 +10,23 @@ void main () {
   // c = a + b;
   // print("La suma es $c");
   //*****************************/
-  sumar();                 //Ejercicio #1
-  sumarEficiente(4, 3);    //Ejercicio #2
+  sumar();                                          //Ejercicio #1
+  sumarEficiente(4, 3);                             //Ejercicio #2
   sumarEficiente(8, 10);
   sumarEficiente(7, 2);
-  saludar("posada", "M");  //Ejercicio #3
+  saludar("posada", "M");                           //Ejercicio #3
   saludar("maria", "F");
-  List<String> frutas = ["Mango", "Pera", "Uva"];  //Ejercicio #4
+  List<String> frutas = ["Mango", "Pera", "Uva"];   //Ejercicio #4
   List<String> nombres = ["Juan", "Ana", "Eva"];
   mostrarLista(frutas, "Fruta");
   print("*" * 30);
   mostrarLista(nombres, "Nombre");
-  double multi = multiplicacion(3, 5);     //Ejercicio #5
+  double multi = multiplicacion(3, 5);              //Ejercicio #5
   print("La multiplicacion es: $multi");
 }
 
-void sumar() {   //Ejercicio #1
+//Ejercicio #1
+void sumar() {   
   int a, b, c;
   a = 5;
   b = 3;
@@ -33,13 +34,15 @@ void sumar() {   //Ejercicio #1
   print("La suma es $c");
 }
 
-void sumarEficiente(int num1, int num2) {  //Ejercicio #2
+//Ejercicio #2
+void sumarEficiente(int num1, int num2) {  
   int suma;
   suma = num1 + num2;
   print("La suma es $suma");
 }
 
-void saludar(String nombre, String genero) {      //Ejercicio #3
+//Ejercicio #3
+void saludar(String nombre, String genero) {      
   if (genero == "M") {
     print("Hola querido $nombre");
   }
@@ -48,18 +51,21 @@ void saludar(String nombre, String genero) {      //Ejercicio #3
   }
 }
 
-void mostrarLista(List<String> lista, String nombre) {      //Ejercicio #4
+//Ejercicio #4
+void mostrarLista(List<String> lista, String nombre) {      
   for (var i = 0; i < lista.length; i++) {
     print("$nombre #${i+1} ${lista[i]}");  
   }
 }
 
-double multiplicacion(double num1, double num2) {    //Ejercicio #5
+//Ejercicio #5
+double multiplicacion(double num1, double num2) {    
   double multiplicacion = num1 * num2;
   return multiplicacion;
 }
 
-/*   
+/* 
+  QUE ES EL VOID:  
   El void en tu código es un tipo de retorno en el lenguaje de programación Dart (y en otros lenguajes como C, 
   C++, Java, etc.).
 
@@ -74,7 +80,7 @@ double multiplicacion(double num1, double num2) {    //Ejercicio #5
   En resumen, void se usa para especificar que una función no devuelve ningún valor. En el caso de tu código, 
   el programa se ejecuta y simplemente imprime los mensajes en la consola, sin retornar ningún valor.
 
-  **************************************************
+  *****************************************************************************************************************
   La principal diferencia entre las dos funciones es el tipo de retorno y el propósito de cada una. Aquí están 
   los detalles:
 
