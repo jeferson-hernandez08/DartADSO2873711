@@ -10,13 +10,13 @@ void main () {
   // c = a + b;
   // print("La suma es $c");
   //*****************************/
-  sumar();                                          //Ejercicio #1
+  sumar();                                                     //Ejercicio #1
   sumarEficiente(4, 3);                             //Ejercicio #2
   sumarEficiente(8, 10);
   sumarEficiente(7, 2);
-  saludar("posada", "M");                           //Ejercicio #3
+  saludar("posada", "M");                       //Ejercicio #3
   saludar("maria", "F");
-  List<String> frutas = ["Mango", "Pera", "Uva"];   //Ejercicio #4
+  List<String> frutas = ["Mango", "Pera", "Uva"];      //Ejercicio #4
   List<String> nombres = ["Juan", "Ana", "Eva"];
   mostrarLista(frutas, "Fruta");
   print("*" * 30);
@@ -26,12 +26,12 @@ void main () {
 }
 
 //Ejercicio #1
-void sumar() {   
+void sumar() {                       // Tipo retorno void: Se significa que una función no devuelve ningún valor.
   int a, b, c;
   a = 5;
   b = 3;
   c = a + b;
-  print("La suma es $c");
+  print("La suma es $c");  
 }
 
 //Ejercicio #2
@@ -123,7 +123,7 @@ double multiplicacion(double num1, double num2) {
 */
 
 /*  
-  Funciones
+  FUNCIONES:
   Una función es un bloque de código reutilizable que realiza una tarea específica. Puede recibir parámetros 
   (entradas) y puede devolver un valor (salida). Se define fuera de una clase y se puede invocar por su nombre.
 
